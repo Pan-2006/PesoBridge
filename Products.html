@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <title>ShopSphere | Ecommerce Website</title>
+</head>
+<body>
+    <header class="bg-light py-3 shadow-sm">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand" href="/">
+                <img src="images/Logo.png" alt="ShopSphere Logo" width="100">
+            </a>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="Camat_ex4.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Products.html">Products</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Cart.html"><i class="fas fa-shopping-cart"></i></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Our Products</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="images/Curry.png" class="card-img-top img-fluid" alt="Curry 4">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Curry 4</h5>
+                        <p class="card-text">₱1,500.00</p>
+                        <button class="btn btn-warning" onclick="addToCart('Curry 4', 1500, 'images/Curry.png')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="images/Lebron.png" class="card-img-top img-fluid" alt="Lebron 16">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Lebron 16</h5>
+                        <p class="card-text">₱1,500.00</p>
+                        <button class="btn btn-warning" onclick="addToCart('Lebron 16', 1500, 'images/Lebron.png')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="images/Polo1.png" class="card-img-top img-fluid" alt="Black Polo Shirt">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Black Polo Shirt</h5>
+                        <p class="card-text">₱850.00</p>
+                        <button class="btn btn-warning" onclick="addToCart('Black Polo Shirt', 850, 'images/Polo1.png')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="images/Polo2.png" class="card-img-top img-fluid" alt="Navy Blue Polo Shirt">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Navy Blue Polo Shirt</h5>
+                        <p class="card-text">₱900.00</p>
+                        <button class="btn btn-warning" onclick="addToCart('Navy Blue Polo Shirt', 900, 'images/Polo2.png')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="images/ring1.png" class="card-img-top img-fluid" alt="Silver Ring">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Silver Ring</h5>
+                        <p class="card-text">₱200.00</p>
+                        <button class="btn btn-warning" onclick="addToCart('Silver Ring', 200, 'images/ring1.png')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="images/ring2.png" class="card-img-top img-fluid" alt="Black Engraved Ring">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Black Engraved Ring</h5>
+                        <p class="card-text">₱250.00</p>
+                        <button class="btn btn-warning" onclick="addToCart('Black Engraved Ring', 250, 'images/ring2.png')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="images/pants1.png" class="card-img-top img-fluid" alt="Black Cargo Pants">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Black Cargo Pants</h5>
+                        <p class="card-text">₱1,100.00</p>
+                        <button class="btn btn-warning" onclick="addToCart('Black Cargo Pants', 1100, 'images/pants1.png')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="images/pants2.png" class="card-img-top img-fluid" alt="Khaki Slacks">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Khaki Slacks</h5>
+                        <p class="card-text">₱1,000.00</p>
+                        <button class="btn btn-warning" onclick="addToCart('Khaki Slacks', 1000, 'images/pants2.png')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="images/glasses1.png" class="card-img-top img-fluid" alt="Ray-Bans Glasses">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Ray-Ban Glasses</h5>
+                        <p class="card-text">₱1,000.00</p>
+                        <button class="btn btn-warning" onclick="addToCart('Ray-Bans Glasse', 1000, 'images/glasses1.png')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="images/glasses2.png" class="card-img-top img-fluid" alt="Rectangular Sunglasses">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Rectangular Sunglasses Sunglasses</h5>
+                        <p class="card-text">₱1,000.00</p>
+                        <button class="btn btn-warning" onclick="addToCart('Rectangular Sunglasses', 1000, 'images/glasses2.png')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 text-center">
+                    <img src="images/Logo.png" alt="ShopSphere Logo" class="mb-2" width="100">
+                    <p>Discover the Old and New with ShopSphere</p>
+                </div>
+                <div class="col-md-3">
+                    <h3>Navigation</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html" class="text-decoration-none text-light">Home</a></li>
+                        <li><a href="Products.html" class="text-decoration-none text-light">Products</a></li>
+                        <li><a href="#contact" class="text-decoration-none text-light">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h3>Follow Us</h3>
+                    <ul class="list-unstyled">
+                        <li><a href="https://www.facebook.com/leonardvincent.camat.9" class="text-decoration-none text-light">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/leoc_wha/" class="text-decoration-none text-light">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">&copy; 2025 - ShopSphere Store</div>
+        </div>
+    </footer>
+
+
+    <script>
+        function addToCart(name, price, image) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            cart.push({ name, price, image });
+            localStorage.setItem("cart", JSON.stringify(cart));
+            alert(name + " added to cart!");
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
