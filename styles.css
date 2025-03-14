@@ -1,0 +1,745 @@
+/* Core Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Weston Free';
+    text-align: center;
+    line-height: 1.6;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Header & Navigation */
+header {
+    width: 100%;
+    height: 100px;
+    background: #600202;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo {
+    width: 30%;
+    float: left;
+    text-align: left;
+    line-height: 100px;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 30px;
+    font-family: 'Weston Free';
+    color: #fff;
+    letter-spacing: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+    margin-right: 10px;
+}
+
+nav {
+    float: right;
+    line-height: 100px;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: 'Weston Free';
+    letter-spacing: 4px;
+    font-size: 20px;
+    color: #fff;
+    padding: 36px 10px;
+    margin: 0 1px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+    background: #fff;
+    color: #130f40;
+    font-weight: 700;
+}
+
+/* Banner Section */
+.banner-area {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/PesoBanner.png');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+    margin-top: 100px; /* Update this to account for fixed header */
+    position: relative; /* Add this */
+}
+.banner-area:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #130f40;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+.banner-area h2 {
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+
+.banner-area p {
+    font-size: 24px;
+    color: #fff;
+}
+
+/* Button Styles */
+.btn-primary, 
+.btn-secondary,
+.verify-btn,
+.confirm-btn,
+.submit-btn,
+.service-btn {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-weight: 500;
+    gap: 8px;
+}
+
+.btn-primary,
+.verify-btn,
+.confirm-btn,
+.submit-btn,
+.service-btn {
+    background: #600202;
+    color: #fff;
+    border: none;
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 2px solid #fff;
+}
+.btn-success {
+    background: #28a745;
+    color: white;
+}
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 5px 0;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.fee-info {
+    background: #e9ecef;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.btn-primary:hover,
+.verify-btn:hover,
+.confirm-btn:hover,
+.submit-btn:hover,
+.service-btn:hover {
+    background: #800404;
+    transform: translateY(-2px);
+}
+
+.btn-secondary:hover {
+    background: #fff;
+    color: #600202;
+    transform: translateY(-2px);
+}
+
+/* Main Content Area */
+.content-area {
+    width: 100%;
+    min-height: 1000px;
+    position: relative;
+    background: #fff;
+    padding: 60px 0;
+    margin-top: 100px; 
+    flex: 1;
+}
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.box-area {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Form Components */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+    text-align: left;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #600202;
+    outline: none;
+    box-shadow: 0 0 5px rgba(96, 2, 2, 0.2);
+}
+
+/* Card Styles */
+.service-card,
+.feature-card,
+.info-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover,
+.feature-card:hover,
+.info-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Icon Styles */
+.service-icon {
+    width: 80px;
+    height: 80px;
+    background: #600202;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.service-icon i,
+.feature-card i,
+.info-card i {
+    font-size: 32px;
+    color: #fff;
+}
+
+.feature-card i,
+.info-card i {
+    color: #600202;
+}
+
+/* Grid Layouts */
+.service-cards,
+.features-grid,
+.contact-grid,
+.info-grid,
+.footer-grid {
+    display: grid;
+    gap: 30px;
+}
+
+.service-cards,
+.features-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.contact-grid {
+    grid-template-columns: 1fr 1fr;
+}
+
+.info-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.footer-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+/* Footer Styles */
+.main-footer {
+    background: #600202;
+    color: #fff;
+    padding: 60px 0 20px;
+    margin-top: 60px;
+}
+
+.footer-section h4 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 20px;
+    position: relative;
+}
+.footer-middle {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 30px 0;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.payment-methods,
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.legal-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.legal-links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.legal-links a:hover {
+    color: #fff;
+}
+
+.copyright {
+    margin-top: 15px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+}
+
+.contact-btn {
+    display: inline-block;
+    padding: 8px 20px;
+    background: #600202;
+    color: #600202;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+    background: #ffc107;
+    color: #600202;
+}
+
+.footer-section h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background: #ffc107;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul a:hover {
+    color: #ffc107;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: center;  
+    align-items: center;     
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #fff;
+    color: #600202;
+    transform: translateY(-3px);
+}
+.social-links a i {
+    font-size: 18px;         
+    line-height: 1;       
+}
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-bottom p {
+    color: #fff;
+    font-size: 14px;
+}
+
+/* Animations */
+@keyframes spin {
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Loading States */
+.loading {
+    opacity: 0.7;
+    pointer-events: none;
+    position: relative;
+}
+
+.loading::after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: 3px solid #600202;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .logo {
+        float: none;
+        text-align: center;
+        width: 100%;
+    }
+
+    nav {
+        float: none;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    nav a {
+        display: block;
+        margin: 5px 0;
+        padding: 10px;
+    }
+
+    .banner-area {
+        height: 300px;
+        margin-top: 120px;
+    }
+
+    .banner-area h2 {
+        font-size: 32px;
+    }
+
+    .service-cards,
+    .features-grid,
+    .contact-grid,
+    .info-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+
+    .footer-section h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    .footer-middle {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .legal-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
+.progress-bar {
+    margin: 20px 0;
+    padding: 20px 0;
+}
+
+.step-indicator {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.step {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    position: relative;
+}
+
+.step.active {
+    background: #007bff;
+    color: white;
+}
+
+.step::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 2px;
+    background: #e0e0e0;
+    right: -60px;
+    top: 50%;
+}
+
+.step:last-child::after {
+    display: none;
+}
+
+/* Form Styles */
+.transfer-step {
+    display: none;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.transfer-step.active {
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.validation-message {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Button Styles */
+.step-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+/* Update the existing media query and add new ones */
+@media (max-width: 768px) {
+    /* Header adjustments */
+    header {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .wrapper {
+        width: 90%;
+        margin: 0 auto;
+        max-width: 1200px;
+        
+    }
+
+    .logo {
+        float: none;
+        text-align: center;
+        width: 100%;
+        line-height: normal;
+        padding: 10px 0;
+    }
+
+    .logo a {
+        justify-content: center;
+        font-size: 24px;
+    }
+
+    nav {
+        float: none;
+        line-height: normal;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    nav a {
+        padding: 8px 15px;
+        font-size: 16px;
+        margin: 2px;
+    }
+
+    /* Banner adjustments */
+    .banner-area {
+        height: auto;
+        padding: 60px 20px;
+        margin-top: 140px;
+    }
+
+    .banner-area h2 {
+        font-size: 36px;
+    }
+
+    .banner-area p {
+        font-size: 18px;
+    }
+
+    .banner-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    /* Grid layouts */
+    .service-cards,
+    .features-grid,
+    .contact-grid,
+    .info-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 15px;
+    }
+
+    /* Card adjustments */
+    .service-card,
+    .feature-card,
+    .info-card {
+        padding: 20px;
+    }
+
+    /* Form adjustments */
+    .transfer-step {
+        padding: 15px;
+    }
+
+    .step-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .step-buttons button {
+        width: 100%;
+    }
+}
+
+/* Small devices (phones) */
+@media (max-width: 480px) {
+    .logo a {
+        font-size: 20px;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    .banner-area h2 {
+        font-size: 28px;
+    }
+
+    .banner-area p {
+        font-size: 16px;
+    }
+
+    .service-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .service-icon i {
+        font-size: 24px;
+    }
+
+    .footer-section h4 {
+        font-size: 18px;
+    }
+}
