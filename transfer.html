@@ -42,6 +42,51 @@
                         <span class="step">3</span>
                     </div>
                 </div>
+                
+                    <div class="transfer-step active">
+                        <h3><i class="fas fa-user"></i> Step 1: Sender Information</h3>
+                        <div class="form-group">
+                            <label>Are you an OFW?</label>
+                            <div class="ofw-verification">
+                                <label class="radio-container">
+                                    <input type="radio" name="isOfw" value="yes" required>
+                                    <span class="radio-label">Yes</span>
+                                </label>
+                                <label class="radio-container">
+                                    <input type="radio" name="isOfw" value="no" required>
+                                    <span class="radio-label">No</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div id="ofwError" class="error-message" style="display: none;">
+                        <i class="fas fa-exclamation-circle"></i> Sorry, this service is only available for OFWs. You do not meet the requirements.
+                    </div>
+                </div>
+
+                        <div class="form-group ofw-details" style="display: none;">
+                            <label>OFW ID Number</label>
+                            <input type="text" id="ofwId" placeholder="Enter your OFW ID">
+                            <span class="validation-message"></span>
+                        </div>
+
+                        <div class="form-group ofw-details" style="display: none;">
+                            <label>Country of Work</label>
+                            <select id="workCountry">
+                                <option value="">Select Country</option>
+                                <option value="UAE">United Arab Emirates</option>
+                                <option value="KSA">Saudi Arabia</option>
+                                <option value="SGP">Singapore</option>
+                                <option value="HKG">Hong Kong</option>
+                                <option value="QAT">Qatar</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" id="senderName" required>
+                            <span class="validation-message"></span>
+                        </div>
 
                 <div class="transfer-form">
                     <div class="transfer-step active">
