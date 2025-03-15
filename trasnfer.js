@@ -134,3 +134,55 @@ function updateSummary() {
 
     });
 });
+document.querySelectorAll('input[name="isOfw"]').forEach(radio => {
+    radio.addEventListener('change', function() {
+        const ofwDetails = document.querySelectorAll('.ofw-details');
+        ofwDetails.forEach(detail => {
+            detail.style.display = this.value === 'yes' ? 'block' : 'none';
+        });
+        
+        // Make OFW fields required if OFW is selected
+        const ofwId = document.getElementById('ofwId');
+        const workCountry = document.getElementById('workCountry');
+        
+        if (this.value === 'yes') {
+            ofwId.setAttribute('required', '');
+            workCountry.setAttribute('required', '');
+        } else {
+            ofwId.removeAttribute('required');
+            workCountry.removeAttribute('required');
+        }
+    });
+});
+
+// Validate OFW ID format (example format: OFW-XXXX-XXXX)
+document.getElementById('ofwId').addEventListener('blur', function() {
+    const ofwIdRegex = /^OFW-\d{4}-\d{4}$/;
+    const validationMessage = this.nextElementSibling;
+    
+    if (this.value && !ofwIdRegex.test(this.value)) {
+        validationMessage.textContent = 'Please enter a valid OFW ID (Format: OFW-XXXX-XXXX)';
+        this.classList.add('invalid');
+    } else {
+        validationMessage.textContent = '';
+        this.classList.remove('invalid');
+    }
+});
+// OFW Verification Handler
+document.querySelectorAll('input[name="isOfw"]').forEach(radio => {
+    radio.addEventListener('change', function() {
+        const ofwDetails = document.querySelectorAll('.ofw-details');
+        const ofwError = document.getElementById('ofwError');
+        const nextButton = document.querySelector('.next-step');
+        
+        if (this.value === 'yes') {
+            ofwDetails.forEach(detail => detail.style.display = 'block');
+            ofwError.style.display = 'none';
+            nextButton.disabled = false;
+        } else {
+            ofwDetails.forEach(detail => detail.style.display = 'none');
+            ofwError.style.display = 'block';
+            nextButton.disabled = true;
+        }
+    });
+});
